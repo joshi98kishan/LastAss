@@ -1,0 +1,35 @@
+{
+  "project_info": {
+    "project_number": "975278081641",
+    "firebase_url": "https://myfirstfirebaseapp-93a68.firebaseio.com",
+    "project_id": "myfirstfirebaseapp-93a68",
+    "storage_bucket": "myfirstfirebaseapp-93a68.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:975278081641:android:6a5f32ac9417ffcb",
+        "android_client_info": {
+          "package_name": "com.example.android.lastass"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCqcaV8yxdJJz3tMk1hHBykKcNlGEvcDws"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "975278081641-ctp9d2ibhsdggqvmeaju48fhe0qujp10.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
