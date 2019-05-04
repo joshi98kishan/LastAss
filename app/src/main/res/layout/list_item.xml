@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/list_item"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/dish_image"
+        android:layout_width="88dp"
+        android:layout_height="88dp"
+        android:src="@mipmap/ic_launcher_round"/>
+    <TextView
+        android:id="@+id/dish_name"
+        android:textSize="25sp"
+        android:layout_toRightOf="@id/dish_image"
+        android:paddingLeft="40dp"
+        android:paddingRight="30dp"
+        android:paddingTop="20dp"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pani Puri"/>
+    <View
+        android:id="@+id/view"
+        android:layout_toLeftOf="@id/dish_price"
+        android:layout_marginRight="25dp"
+        android:layout_width="1dp"
+        android:layout_height="88dp"
+        android:background="#ababab"/>
+    <TextView
+        android:id="@+id/dish_price"
+        android:textSize="30sp"
+        android:layout_alignParentRight="true"
+        android:paddingRight="30dp"
+        android:paddingTop="20dp"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="20"/>
+</RelativeLayout>
