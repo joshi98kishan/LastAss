@@ -24,7 +24,6 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     private EditText editTextEmail;
     private EditText editTextPassword;
     private TextView textViewSignUp;
-
     private ProgressDialog progressDialog;
     private FirebaseAuth firebaseAuth;
 
@@ -37,7 +36,8 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         if(firebaseAuth.getCurrentUser() != null){
             //Directly start profile activity here
             finish();
-            startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
+            startActivity(new Intent(getApplicationContext(),
+                    ProfileActivity.class));
         }
 
         progressDialog = new ProgressDialog(this);
@@ -45,28 +45,27 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         editTextEmail = findViewById(R.id.emailEt);
         editTextPassword = findViewById(R.id.passwordEt);
         textViewSignUp = findViewById(R.id.alreadyRegisterTv);
-
         buttonRegister.setOnClickListener(this);
         textViewSignUp.setOnClickListener(this);
     }
-
     private void registerUser(){
         String email = editTextEmail.getText().toString().trim();
         String password = editTextPassword.getText().toString().trim();
 
         if(TextUtils.isEmpty(email)){
-            Toast.makeText(RegisterActivity.this,"Please enter email",Toast.LENGTH_SHORT).show();
+            Toast.makeText(RegisterActivity.this,
+                    "Please enter email",
+                    Toast.LENGTH_SHORT).show();
             return;
         }
-
         if(TextUtils.isEmpty(password)){
-            Toast.makeText(RegisterActivity.this,"Please enter password",Toast.LENGTH_SHORT).show();
+            Toast.makeText(RegisterActivity.this,
+                    "Please enter password",
+                    Toast.LENGTH_SHORT).show();
             return;
         }
-
         progressDialog.setMessage("Register User...");
         progressDialog.show();
-
         firebaseAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
@@ -75,23 +74,25 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                         if(task.isSuccessful()){
                             //User is successfully registered and logged in
                             //Directly start profile activity here
-                            Toast.makeText(RegisterActivity.this,"Registered Successfully",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(RegisterActivity.this,
+                                    "Registered Successfully",
+                                    Toast.LENGTH_SHORT).show();
                             finish();
-                            startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
-
+                            startActivity(new Intent(getApplicationContext(),
+                                    ProfileActivity.class));
                         }else{
-                            Toast.makeText(RegisterActivity.this,"Could not register. Please try again",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(RegisterActivity.this,
+                                    "Could not register. Please try again",
+                                    Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
     }
-
     @Override
     public void onClick(View v) {
         if(v == buttonRegister){
             registerUser();
         }
-
         if(v == textViewSignUp){
             startActivity(new Intent(this, LoginActivity.class));
         }

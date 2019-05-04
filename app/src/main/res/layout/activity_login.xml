@@ -4,13 +4,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:orientation="vertical">
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -19,14 +17,12 @@
             android:text="Log In"
             android:textColor="#FF858386"
             android:textSize="30sp" />
-
         <EditText
             android:id="@+id/emailEt"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:hint="Enter your email"
             android:inputType="textEmailAddress" />
-
         <EditText
             android:id="@+id/passwordEt"
             android:layout_width="250dp"
@@ -34,7 +30,6 @@
             android:layout_marginTop="30dp"
             android:hint="Enter password"
             android:inputType="textPassword" />
-
         <Button
             android:id="@+id/signinButton"
             android:layout_width="150dp"
@@ -44,7 +39,6 @@
             android:background="@drawable/button_shape"
             android:text="Sign In"
             android:textColor="@color/white" />
-
         <TextView
             android:id="@+id/signupTv"
             android:layout_width="wrap_content"
@@ -53,5 +47,4 @@
             android:layout_marginTop="20dp"
             android:text="Not have an account? SignUp Here" />
     </LinearLayout>
-
 </RelativeLayout>
